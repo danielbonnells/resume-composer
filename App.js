@@ -1,13 +1,19 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { Component } from 'react';
+import { StyleSheet, Text, View, Button, Alert, SafeAreaView } from 'react-native';
+import  ButtonRect   from './buttonRect'
+import { AsyncStorage } from 'react-native';
+import TextName from './textName'
+
 
 export default function App() {
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+    <SafeAreaView style={styles.container}>
+      <Text>Welcome Back <TextName /></Text>
+      <ButtonRect name="Submit"></ButtonRect>
       <StatusBar style="auto" />
-    </View>
+    </SafeAreaView>
   );
 }
 
@@ -18,4 +24,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  random: {
+    margin: '50px'
+  }
 });
